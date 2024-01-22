@@ -7,7 +7,7 @@ LABEL version="0.1.0"
 LABEL repository="https://github.com/fr33co/auto-release-milestone-action"
 LABEL maintainer="Angel Guadarrama"
 
-RUN apt update && apt install -y jq
+RUN apt update && apt install -y jq dotnet-sdk-3.1
 RUN dotnet tool install --global GitReleaseManager.Tool
 
 ENV PATH /root/.dotnet/tools:$PATH
