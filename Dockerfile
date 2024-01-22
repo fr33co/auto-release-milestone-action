@@ -11,8 +11,7 @@ RUN apt update && apt install -y jq wget apt-transport-https
 
 RUN wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb 
 RUN dpkg -i packages-microsoft-prod.deb 
-RUN apt update 
-RUN apt install dotnet-runtime-6.0
+RUN apt update
 RUN apt install dotnet-sdk-6.0
 RUN dotnet --version
 RUN dotnet tool install --global GitReleaseManager.Tool
