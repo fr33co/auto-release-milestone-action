@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM dotnet/sdk:6.0
 
 LABEL "com.github.actions.name"="Auto Release Milestone"
 LABEL "com.github.actions.description"="Automatically create a release milestone"
@@ -7,12 +7,7 @@ LABEL version="0.1.0"
 LABEL repository="https://github.com/fr33co/auto-release-milestone-action"
 LABEL maintainer="Angel Guadarrama"
 
-RUN apt update && apt install -y jq wget apt-transport-https 
-
-RUN wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb 
-RUN dpkg -i packages-microsoft-prod.deb 
-RUN apt update
-RUN apt install dotnet-sdk-6.0
+RUN apt update && apt install -y jq
 RUN dotnet --version
 RUN dotnet tool install --global GitReleaseManager.Tool
 
