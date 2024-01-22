@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM ubuntu:22.04
 
 LABEL "com.github.actions.name"="Auto Release Milestone"
 LABEL "com.github.actions.description"="Automatically create a release milestone"
