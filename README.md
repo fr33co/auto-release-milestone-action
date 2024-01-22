@@ -6,13 +6,13 @@ The issues that were closed as part of the milestone will be used as the bases t
 
 ## Inputs
 
-### 'repo-token'
+### `repo-token`
 
 **Required** The `GITHUB_TOKEN` used to access the current repository through the `Github REST API`
 
 ## Outputs
 
-### 'release-url'
+### `release-url`
 
 The URL of the Github release that was drafted. Defaults to an empy string
 
